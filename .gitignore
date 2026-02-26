@@ -3,6 +3,6 @@ __pycache__/
 *.pyc
 .env
 dist/
-*.mp4
 *.mov
 *.pdf
+!assets/demo.mp4
