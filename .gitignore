@@ -6,3 +6,10 @@ dist/
 *.mov
 *.pdf
 !assets/demo.mp4
+task.md
+note.md
+upwork.md
+test_api.py
+workshops/
+2.upwork-interview/
+4.global-positioning/
