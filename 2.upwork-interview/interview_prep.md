@@ -16,10 +16,16 @@
 ### Q3: "How do you do the 3-Way Match?"
 > "Three layers: (1) Document AI extracts invoice data, (2) Rule-based pre-check (±2% tolerance), (3) Vertex AI analyzes edge cases and outputs verdict: auto-approve (85%), manual review (12%), fraud alert (3%)."
 
-### Q4: "ERP integration?"
-> "'Strategic Intelligence Layer' approach — we don't replace ERPs (SAP/Oracle/ServiceNow), we augment them with AI. ERP stays system of record, AI handles decision-making."
+### Q4: "ERP integration (ServiceNow Specific)?"
+> "'Strategic Intelligence Layer' approach — we don't replace ERPs (SAP/Oracle). We use ServiceNow as the 'Action Layer'. I augment ServiceNow with AI-Native orchestration for intelligent decision-making (Vertex AI), while ServiceNow remains the platform of record for workflows."
 
-### Q5: "Change management?"
+### Q5: "How do you ensure configuration over customization?"
+> "Strict adherence to ServiceNow's OOTB (Out-of-the-Box) workflows. Using Integration Hub for connectors and App Engine for custom logic, avoiding ad-hoc scripts on core tables to ensure platform upgradeability."
+
+### Q6: "Where does AI fit into the ServiceNow S2P lifecycle?"
+> "Beyond OCR: (1) Autonomous scoring for vendor selection using Vertex AI, (2) Predictive anomaly detection in AP to prevent fraud, (3) Natural language requirement gathering for custom S2P workbooks."
+
+### Q7: "Change management?"
 > "Pilot-Prove-Scale: Week 1-2 pilot on invoice matching, Week 3-4 measure ROI, Week 5+ expand and create SOPs."
 
 ---

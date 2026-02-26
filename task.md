@@ -193,10 +193,10 @@
 | Amaç | Toplam Görev | Tamamlanan | İlerleme |
 |---|---|---|---|
 | 1. Suat Ak S2P Projesi | 29 | 29 | ▓▓▓▓▓▓▓▓▓▓ 100% |
-| 2. Upwork Mülakatı | 15 | 0 | ░░░░░░░░░░ 0% |
+| 2. Upwork Mülakatı | 15 | 6 | ▓▓▓▓░░░░░░ 40% |
 | 3. SOP Dökümanları | 10 | 4 | ▓▓▓▓░░░░░░ 40% |
 | 4. Global Konumlandırma | 13 | 0 | ░░░░░░░░░░ 0% |
-| **TOPLAM** | **67** | **33** | ▓▓▓▓░░░░░░ **49%** |
+| **TOPLAM** | **67** | **39** | ▓▓▓▓▓░░░░░ **58%** |
 
 ---
 
