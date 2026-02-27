@@ -40,29 +40,41 @@ Identifies IBAN changes, price spikes, or unauthorized "Maverick Spending" befor
     └── sql/                 # Database Schemas
 ```
 
-## 🔄 The S2P Lifecycle: From Discovery to Payment
+## 🔄 The S2P Lifecycle: Stage-by-Stage Workflow
 
-The application provides a seamless, visual workflow to manage procurement. Below is how the system orchestrates the transition from a simple search result to a finalized payment.
+The Forenly AI S2P platform operates on a high-precision Kanban flow. Each candidate supplier is represented as a **Company Card** that carries its own metadata, documentation, and AI-score as it moves toward final settlement.
 
-### 1. Phase 1: Intelligent Sourcing & API Enrichment
-- **Ecosystem Sourcing**: We utilize the **Google Maps (Places) API** to discover vendors globally based on real-time location and category data.
-- **AI Enrichment**: Discovery results are automatically passed to **Gemini AI**. The engine "enriches" the data by analyzing supplier ratings, web presence, and strategic relevance, producing a weighted "Strategic Score" for each lead.
-- **Dynamic Company Cards**: Every result is transformed into a **Company Card**—the central unit of management in the platform.
+### 1. Discovery (The Sourcing Engine)
+*Initial phase where global data is ingested and filtered.*
+- **API Ingestion**: Discovery via **Google Maps (Places) API** and industry-specific crawlers.
+- **AI Scoring**: Gemini AI analyzes the digital footprint and scores the vendor (1-100) based on strategic fit.
+- **Card Action**: User reviews the "Discovery Card" and creates a formal entry in the pipeline.
 
-### 2. Managing the Company Card & "Moving to the Right"
-The UI operates on a stage-gated, Kanban-style progression where cards move through the procurement funnel:
+### 2. Qualification (RFI/RFQ Stage)
+*Standardizing and validating supplier data.*
+- **Company Card Actions**:
+    - **RFI (Request for Information)**: Uploading certificates (ISO, Tax IDs) directly to the card.
+    - **Metadata Management**: Editing lead times, minimum order quantities (MOQ), and shipping terms.
+- **Goal**: Transition a "Lead" into a "Qualified Supplier."
 
-- **Editable Metadata**: Each card contains editable fields for pricing, terms, and risk levels, allowing procurement officers to refine AI-generated data.
-- **Procurement Suites (RFI / RFQ / RFP)**: 
-    - **RFI (Info)**: Request and track initial supplier credentials.
-    - **RFQ (Quota)**: Compare price offerings directly within the card.
-    - **RFP (Proposal)**: Detailed proposal management and attachment tracking.
-- **Workflow Progression**: Cards are "moved to the right" (Sourcing → Negotiation → Fulfillment → Payment) only after specific checkboxes (e.g., RFP approved, Contract signed) are validated.
+### 3. Negotiation (RFQ/RFP Stage)
+*Determining financial and operational viability.*
+- **Company Card Actions**:
+    - **RFQ (Request for Quotation)**: Inputting unit prices and comparing competing bids side-by-side.
+    - **RFP (Request for Proposal)**: Attaching complex technical proposals and milestone requirements.
+    - **Scenario Analysis**: Adjusting variable costs (discounts, bulk rates) to see real-time ROI impact.
 
-### 3. The Path to Payment
-As a card reaches the final stages, the **3-Way Match Engine** takes over:
-- **Verification**: The system performs a semantic match between the **PDF Invoice** (extracted via Document AI), the **Purchase Order**, and the **Goods Receipt**.
-- **Approval Gate**: If the match is successful (or approved by a human after exception flagging), the card moves to the **Pay** stage, triggering the final financial reconciliation.
+### 4. Fulfillment (PO & Goods Receipt)
+*Operational execution and tracking.*
+- **Company Card Actions**:
+    - **PO Generation**: Automated creation of Purchase Orders (PDF) based on negotiated card data.
+    - **GRN Integration**: Tracking Goods Receipt Notes (GRN) to confirm physical delivery against the order.
+
+### 5. Final Settlement (The Path to Payment)
+*Security, validation, and payout.*
+- **3-Way Match Verification**: The system triggers a semantic comparison between the **Invoice**, **Purchase Order**, and **Goods Receipt**.
+- **Fraud Check**: AI flags any discrepancies in IBANs, tax calculations, or unauthorized price variances.
+- **Final Move**: Once validated, the card moves to **Paid**, archiving the full history into Cloud SQL for audit.
 
 ## 🛠️ Setup & Installation
 
