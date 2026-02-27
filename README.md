@@ -40,6 +40,30 @@ Identifies IBAN changes, price spikes, or unauthorized "Maverick Spending" befor
     └── sql/                 # Database Schemas
 ```
 
+## 🔄 The S2P Lifecycle: From Discovery to Payment
+
+The application provides a seamless, visual workflow to manage procurement. Below is how the system orchestrates the transition from a simple search result to a finalized payment.
+
+### 1. Phase 1: Intelligent Sourcing & API Enrichment
+- **Ecosystem Sourcing**: We utilize the **Google Maps (Places) API** to discover vendors globally based on real-time location and category data.
+- **AI Enrichment**: Discovery results are automatically passed to **Gemini AI**. The engine "enriches" the data by analyzing supplier ratings, web presence, and strategic relevance, producing a weighted "Strategic Score" for each lead.
+- **Dynamic Company Cards**: Every result is transformed into a **Company Card**—the central unit of management in the platform.
+
+### 2. Managing the Company Card & "Moving to the Right"
+The UI operates on a stage-gated, Kanban-style progression where cards move through the procurement funnel:
+
+- **Editable Metadata**: Each card contains editable fields for pricing, terms, and risk levels, allowing procurement officers to refine AI-generated data.
+- **Procurement Suites (RFI / RFQ / RFP)**: 
+    - **RFI (Info)**: Request and track initial supplier credentials.
+    - **RFQ (Quota)**: Compare price offerings directly within the card.
+    - **RFP (Proposal)**: Detailed proposal management and attachment tracking.
+- **Workflow Progression**: Cards are "moved to the right" (Sourcing → Negotiation → Fulfillment → Payment) only after specific checkboxes (e.g., RFP approved, Contract signed) are validated.
+
+### 3. The Path to Payment
+As a card reaches the final stages, the **3-Way Match Engine** takes over:
+- **Verification**: The system performs a semantic match between the **PDF Invoice** (extracted via Document AI), the **Purchase Order**, and the **Goods Receipt**.
+- **Approval Gate**: If the match is successful (or approved by a human after exception flagging), the card moves to the **Pay** stage, triggering the final financial reconciliation.
+
 ## 🛠️ Setup & Installation
 
 Detailed instructions can be found in the [S2P Engine Documentation](./1.source-to-pay-engine/README.md).
