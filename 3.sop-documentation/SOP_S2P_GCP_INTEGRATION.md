@@ -167,6 +167,6 @@ Her workflow için ayrı SOP mevcut:
 ---
 
 > **İlgili dökümanlar:**  
-> - Mimari: `1.suat-ak-project/architecture.md`  
-> - Schema: `1.suat-ak-project/sql/schema.sql`  
+> - Mimari: `1.pilot-client-project/architecture.md`  
+> - Schema: `1.pilot-client-project/sql/schema.sql`  
 > - Diğer SOP'lar: `3.sop-documentation/`

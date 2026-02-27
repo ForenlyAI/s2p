@@ -1,4 +1,4 @@
-# 📙 SOP: S2P Integration Guide (Suat Ak Project Case)
+# 📙 SOP: S2P Integration Guide (Enterprise Pilot Client Project Case)
 
 > **SOP Kodu:** SOP-S2P-002  
 > **Versiyon:** 1.0  
@@ -10,7 +10,7 @@
 
 ## 1. Executive Summary
 
-Bu döküman, **Suat Ak — Kahve Filtre S2P Projesi**'nin teknik entegrasyon sürecini ve kullanılan metodolojiyi özetler. Bu rehber, benzer S2P projelerinin Forenly AI standartlarında hızlıca ayağa kaldırılması için kullanılmalıdır.
+Bu döküman, **Enterprise Pilot Client — Kahve Filtre S2P Projesi**'nin teknik entegrasyon sürecini ve kullanılan metodolojiyi özetler. Bu rehber, benzer S2P projelerinin Forenly AI standartlarında hızlıca ayağa kaldırılması için kullanılmalıdır.
 
 ---
 
@@ -50,7 +50,7 @@ Proje üç ana katmandan oluşmaktadır:
 
 ---
 
-## 5. Suat Ak Projesi Özel Notları
+## 5. Enterprise Pilot Client Projesi Özel Notları
 
 - **Query:** "Coffee filter manufacturers Europe" aramasıyla başlangıç yapıldı.
 - **Scoring Logic:** Sürdürülebilirlik, üretim kapasitesi ve lojistik lokasyon bazlı puanlama uygulandı.
