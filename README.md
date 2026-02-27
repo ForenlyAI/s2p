@@ -38,7 +38,6 @@ Identifies IBAN changes, price spikes, or unauthorized "Maverick Spending" befor
 │   ├── frontend/            # React Dashboard for S2P Monitoring (WIP)
 │   ├── scripts/             # Deployment and DB migration scripts
 │   └── sql/                 # Database Schemas
-├── 3.sop-documentation/     # Standard Operating Procedures & Implementation Guides
 └── assets/                  # Project assets and architectural diagrams
 ```
 
