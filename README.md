@@ -33,12 +33,11 @@ Identifies IBAN changes, price spikes, or unauthorized "Maverick Spending" befor
 ## 📁 Repository Structure
 
 ```
-├── 1.source-to-pay-engine/  # Core AI-Native S2P Engine
-│   ├── backend/             # FastAPI Backend & AI Services
-│   ├── frontend/            # React Dashboard for S2P Monitoring (WIP)
-│   ├── scripts/             # Deployment and DB migration scripts
-│   └── sql/                 # Database Schemas
-└── assets/                  # Project assets and architectural diagrams
+└── 1.source-to-pay-engine/  # Core AI-Native S2P Engine
+    ├── backend/             # FastAPI Backend & AI Services
+    ├── frontend/            # React Dashboard for S2P Monitoring (WIP)
+    ├── scripts/             # Deployment and DB migration scripts
+    └── sql/                 # Database Schemas
 ```
 
 ## 🛠️ Setup & Installation
